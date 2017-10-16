@@ -119,7 +119,7 @@ int EncodingConversion::convert(
       size_t output_length = output_end - *output;
       auto conversion_result = iconv(
         converter,
-		input,
+		    (char**)input,
         &input_length,
         output,
         &output_length
